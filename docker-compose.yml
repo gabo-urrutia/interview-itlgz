@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  flask_container:
+    image: flask_intelygenz:latest
+    environment:
+      MONGO_URI: "${MONGO_URI}"
+
+  mongo:
+    image: gabourrutia/intelygenz-mongodb:latest
+    ports:
+      - 27017:27017
+
+  busybox_container:
+    image: curlimages/curl:7.87.0
+    command: tail -F anything
