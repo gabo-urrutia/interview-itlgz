@@ -1,4 +1,4 @@
-##Challenge 1
+## Challenge 1
 
 To solve this one is necessary to change the procedure to get a single object instead the full list in the Mongo DB
 
@@ -15,14 +15,14 @@ To return the 204 instead of an empty array when there are not matches with the 
         return ('', 204)
 ```
 
-##Challenge 2
+## Challenge 2
 
 For this one, as the repository was already on github I decided to use github actions directly:
 You can find the pipeline of the test in `.github/workflows`
 I added a Lint check with flake8, as well as the tox checks
 
 
-##Challenge 3
+## Challenge 3
 
 I added the dockerfile for the application, I decided to use Alpine python version for its lightweight:
 
@@ -36,7 +36,7 @@ EXPOSE 8080
 
 ```
 
-##Challenge 4
+## Challenge 4
 
 To dockerize the database without having the necessity of hardcoding the credentials I decided to use env variables.
 This is the Dockerfile:
@@ -82,7 +82,7 @@ docker tag gabourrutia/intelygenz-mongodb:latest gabourrutia/intelygenz-mongodb:
 docker push gabourrutia/intelygenz-mongodb:latest
 ```
 
-##Challenge 5
+## Challenge 5
 
 Docker-compose it!
 you can find the docker-compose file in the root folder of the repo.
@@ -96,7 +96,7 @@ source .env
 docker-compose up
 ```
 
-##Final Challenge
+## Final Challenge
 
 For this one I decided to use the images I released to dockerhub in both the deployment and the service resources. the code is in  `kubernetes` folder
 
